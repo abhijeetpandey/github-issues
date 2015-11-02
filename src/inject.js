@@ -62,7 +62,7 @@ try {
             if (query.indexOf('assignee') >= 0) {
                 query_strings.push(pathname + query);
                 query_strings.push(pathname + query.replace('assignee', 'mentions'));
-            } else if (pathname.indexOf('issues/assigned') >= 0) {
+            } else if (pathname.indexOf('issues/assigned') >= 0 || pathname.indexOf('pulls/assigned') >= 0) {
                 query_strings.push(pathname);
                 query_strings.push(pathname.replace('assigned', 'mentioned'));
             }
