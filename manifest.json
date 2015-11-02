@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Github Issues (assignee or mentions filter)",
+  "short_name":"githubissues",
+  "version": "0.0.1",
+  "description" : "Github issues fetcher for assignee or mentions of a particular user",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "author":"Abhijeet Pandey | https://github.com/abhijeetpandey",
+  "default_locale":"en",
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["js/jquery/jquery.min.js","src/inject.js"],
+      "run_at": "document_start"
+    }
+  ]
+
+}
